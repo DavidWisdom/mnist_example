@@ -1,0 +1,7 @@
+.idea/*
+.vscode/*
+
+wandb/*
+outputs/*
+mnist-example/*
+data/MNIST/*
