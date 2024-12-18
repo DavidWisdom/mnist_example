@@ -6,3 +6,4 @@ outputs/*
 mnist-example/*
 data/MNIST/*
 *.pyc
+__pycache__/
