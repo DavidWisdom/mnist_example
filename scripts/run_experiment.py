@@ -1,4 +1,9 @@
-from argparse import Namespace
+import sys
+import os
+
+# 添加项目根目录到 sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from typing import List, Optional
 
 import hydra
@@ -6,11 +11,6 @@ from omegaconf import DictConfig
 from pytorch_lightning import Trainer, LightningModule
 from pytorch_lightning.callbacks import Callback, EarlyStopping, ModelCheckpoint
 from pytorch_lightning.loggers.wandb import WandbLogger
-import sys
-import os
-
-# 添加项目根目录到 sys.path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from data import MNISTDataModule
 from lit_models import LitMLP
 
